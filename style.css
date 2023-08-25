@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* #######  colors ################
+sabse dark        #3c3d42
+light green       #9ccd62
+yllow type bg     #f6f8e2
+cream type bg     #e0ddca
+################################## */
+/* ######################## utility classes ################### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+} 
+.btn{
+    background-color: #e93538;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    /* outline: none; */
+}
+
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+ /* for desktop mode */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    box-shadow: 0 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+    opacity: 0.85;
+    background-color: #fff;
+    color: #000;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.menu-items{
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    
+}
+.menu-items li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #e93538;
+    display: block;
+    margin-top: 2px;
+    transition:.25s ease-in-out ;
+}
+.menu-items li:hover::after{
+    width: 100%;
+}
+.navbar .logo{
+    font-size: 2.5rem;
+    color: #0d2337;
+}
+.menu-items a{
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;   
+    color: #444;
+    transition: color .25s ease-in-out;
+}
+.menu-items a:hover{
+    color:  #e93538 ;
+}
+/* #################### showcase ########################### */
+
+.showcase-area{
+    height: 50vh;
+    background:linear-gradient(rgba(240,240,240,.1),rgba(255,255,255,.25)),url("./img/header-image2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.showcase-container{
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.showcase-container h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.showcase-container p{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #444;
+}
+.showcase-container span.dine{
+    color:#e93538;
+    font-weight: 700;
+}
+.showcase-container .primary-btn{
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* ########################### about ################################# */
+#about{
+    padding: 5rem 0;
+    background-color: #f5f5f7;
+}
+.about-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-contents{
+    flex: 1 1 400px;
+    margin: auto;
+    transform: translateX(-200%);
+    animation: about-contents-animation .8s ease-in-out forwards;
+}
+@keyframes about-contents-animation {
+    100%{
+        transform: translate(0);
+    }
+}
+.about-img{
+    flex: 1 1 400px;
+    transform: translateX(200%);
+    animation: about-img-animation .8s ease-in-out forwards;
+}
+@keyframes about-img-animation {
+    100%{
+        transform: translate(0);
+    }
+}
+.about-contents h3{
+    font-size: 2rem;
+    color: #555;
+    font-weight: 500;
+}
+.about-contents h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #3c3d42;
+}
+.delicious{
+    color: #e93538;
+}
+.about-contents p{
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-top: 15px;
+}
+.about-img img {
+   display: block;
+   width: 100%;
+   max-width: 100%;
+   height: 400px;
+   margin: auto;
+   object-fit: cover;
+   object-position: right;
+}
+
+/* ############################ food ################################## */
+
+#food{
+    padding: 3rem 0 3rem 0;
+    /* border: 2px solid red; */
+    /* margin: 5rem 0; */
+}
+#food h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #666;
+    letter-spacing: 5px;
+    font-weight: 600;
+    padding: 3rem 0;
+}
+.food-container{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.img-container img{
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    position: relative;
+    text-align: center;
+    color: white;      
+}
+.fruits ,.vegetables{
+    margin-right: 2rem;
+}
+.img-hover-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    opacity: 0;
+    transition: all .3s ease-in-out ;
+}
+.img-container:hover .img-hover-content{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img-container::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(0,0,0,.65);
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all .3s ease-in-out;
+    
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+
+}
+
+.img-container a{
+    font-size: 1.5rem;
+}
+.img-container h3{
+    font-size: 2rem;
+}
+    
+
+
+
+

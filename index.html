@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restraunt| Flexbox</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <h1 class="logo">FW</h1>
+            <ul class="menu-items">
+                <li><a href="#showcase">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food">Category</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#testimonial">Testimonials</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1><span class="dine">Dine</span> With Us.</h1>
+            <P>Grab the best global cuisines in a single place </P>
+            <div class="primary-btn-link"></div>
+            <a href="#food-menu" class="btn primary-btn">Menu</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-area container">
+            <div class="about-contents">
+                <h3>About Us</h3>
+                <h1>Serving <span class="delicious">delicious</span> food for decades.</h1>
+                <p>At La Bella Vita, we believe that great food starts with great ingredients. Our restaurant's story began over 20 years ago, when our founder, Maria, moved to the United States
+                   from Italy and brought her family's recipes with her. Over the years, we've built a reputation for
+                   our commitment to quality, hospitality, and tradition.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="./img/about-photo.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="food">
+        <h2>Food Served</h2>
+        <div class="food-container container">
+            <div class="food-type fruits">
+                <div class="img-container">
+                    <img src="./img/food1.jpg" alt="">
+                    <div class="img-hover-content">
+                        <h3>Fruits</h3>
+                        <a href="https://en.wikipedia.org/wiki/Fruit" target="_blank" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetables">
+                <div class="img-container">
+                    <img src="./img/food2.jpg" alt="">
+                    <div class="img-hover-content">
+                        <h3>Vegetables</h3>
+                        <a href="https://en.wikipedia.org/wiki/Vegetable" target="_blank" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type grains">
+                <div class="img-container">
+                    <img src="./img/food3.jpg" alt="">
+                    <div class="img-hover-content">
+                        <h3>Grains</h3>
+                        <a href="https://en.wikipedia.org/wiki/grain" target="_blank" class="btn primary-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
